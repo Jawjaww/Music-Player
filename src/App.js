@@ -1,14 +1,14 @@
-import TrackList from "./components/TrackList";
-import PlayerControls from "./components/PlayerControls";
-import { MusicPlayerProvider } from "./MusicPlayerContext";
+import MusicPlayerContextProvider from './context/MusicPlayerContext';
+import Playlist from './components/Playlist';
+import PlayerControls from './components/PlayerControls';
 
 export default function App() {
-  return (
-    <MusicPlayerProvider>
-      <div className="container">
-        <TrackList />
-        <PlayerControls />
-      </div>
-    </MusicPlayerProvider>
-  );
+    return (
+        <MusicPlayerContextProvider>
+            <div className='container'>
+                <Playlist />
+                <PlayerControls />
+            </div>
+        </MusicPlayerContextProvider>
+    );
 }
